@@ -1,21 +1,29 @@
-@import "resets.scss"
 @import "normalizes.scss"
+@import "resets.scss"
 
-$main-color: #F28B64
+.container
+    max-width: 1140px
+    margin: 0 auto
+.main-section
+    height: 800px
+    background: #F0F0F0
+    padding-top: 16px
+    &__nav-container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        height: 69px
+        align-items: center
+    &__logo
+        width: 134px
 
-@mixin box
-    width: 400px
-    height: 400px
-    background-color: grey
+.nav-menu
+    &__list
+        display: flex
+        flex-direction: row
+    &__list-item
+        margin-right: 64px
+        font-size: 18px
+        &:last-child
+            margin-right: 0px
 
-
-.block
-    width: 400px
-    height: 400px
-    background-color: grey
-    &__text
-        color: $main-color
-
-.block-2
-    @include box
-    margin-top: 20px
