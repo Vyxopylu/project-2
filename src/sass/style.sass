@@ -23,6 +23,9 @@ $color-orange: #F28B64
         align-items: center
     &__logo
         width: 134px
+    &__content-container
+        display: flex
+        flex-direction: row
 
 .nav-menu
     &__list
@@ -72,3 +75,18 @@ $color-orange: #F28B64
         border-radius: 100px
         transform: rotate(-36.15deg)
 
+.icons
+    display: inline-flex
+    &__item
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 40px
+        height: 40px
+        border: 1px solid $color-blue
+        border-radius: 100px
+        margin-right: 17px
+        &:last-child
+            margin-right: 0px
+        i
+            font-size: 21px
