@@ -365,6 +365,23 @@ table {
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "MontserratT";
+  src: url("../font/Montserrat-Regular.ttf");
+  font-weight: regular;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MontserratT";
+  src: url("../font/Montserrat-SemiBold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+html {
+  font-family: "MontserratT";
+  font-weight: regular;
+}
+
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -411,6 +428,7 @@ table {
 .nav-menu__list-item {
   margin-right: 64px;
   font-size: 18px;
+  font-weight: bold;
 }
 .nav-menu__list-item:last-child {
   margin-right: 0px;
@@ -501,6 +519,7 @@ table {
 .title {
   font-size: 72px;
   position: relative;
+  font-weight: bold;
 }
 .title__hr {
   position: absolute;
@@ -524,6 +543,7 @@ table {
   border: none;
   font-size: 18px;
   color: white;
+  font-weight: bold;
 }
 .buttons__icon-btn {
   display: inline-flex;
@@ -620,6 +640,7 @@ table {
   position: absolute;
   top: 144px;
   right: -45px;
+  font-weight: bold;
 }
 .cards-item_orange {
   background: #F28B64;
@@ -640,6 +661,7 @@ table {
   font-size: 18px;
 }
 .icons-item__text span {
+  font-weight: bold;
   font-size: 48px;
 }
 
@@ -688,4 +710,19 @@ table {
 
 .title__hr_top {
   bottom: 75px;
+}
+
+.footer__img {
+  position: absolute;
+  left: -250px;
+  bottom: 0px;
+}
+.footer__container {
+  min-height: 272px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.footer__title {
+  margin-bottom: 20px;
 }/*# sourceMappingURL=style.css.map */
