@@ -1,5 +1,8 @@
-@import "normalizes.scss"
+
+@import "normalizes.scss" 
+// сбрасыавет отступы
 @import "resets.scss"
+
 
 *
     box-sizing: border-box
@@ -28,6 +31,7 @@ html
     max-width: 1140px
     margin: 0 auto
     position: relative
+//Тут мы задаем свойства для main-section
 .main-section
     position: relative
     min-height: 800px
@@ -35,6 +39,7 @@ html
     padding-top: 16px
     overflow: hidden
     &__nav-container
+        // при помощи флексов распологаем лого и навигацию в строку
         display: flex
         flex-direction: row
         justify-content: space-between
@@ -57,13 +62,16 @@ html
 
 .nav-menu
     &__list
+        // для того, чтобы пункты меню были в ряд по горизонтали применим:
         display: flex
         flex-direction: row
     &__list-item
+        //разносим наши элементы на необходимое растояние и задаем внешний вид
         margin-right: 64px
         font-size: 18px
         font-weight: bold
         &:last-child
+            //не забываем сбрасывать для последнего элемента margin
             margin-right: 0px
         a
             text-decoration: none
