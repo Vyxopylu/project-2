@@ -1,9 +1,10 @@
 
 @import "normalizes.scss" 
-// сбрасыавет отступы
+// сбрасыавет отступы(1!)
 @import "resets.scss"
 
 
+//Выставляем, чтобы в размеры блока входили все наши падинги и марджены 
 *
     box-sizing: border-box
 
@@ -31,7 +32,7 @@ html
     max-width: 1140px
     margin: 0 auto
     position: relative
-//Тут мы задаем свойства для main-section
+//Тут мы задаем свойства для main-section(1!)
 .main-section
     position: relative
     min-height: 800px
@@ -39,7 +40,7 @@ html
     padding-top: 16px
     overflow: hidden
     &__nav-container
-        // при помощи флексов распологаем лого и навигацию в строку
+        // при помощи флексов распологаем лого и навигацию в строку(1!)
         display: flex
         flex-direction: row
         justify-content: space-between
@@ -62,16 +63,16 @@ html
 
 .nav-menu
     &__list
-        // для того, чтобы пункты меню были в ряд по горизонтали применим:
+        // для того, чтобы пункты меню были в ряд по горизонтали применим:(1!)
         display: flex
         flex-direction: row
     &__list-item
-        //разносим наши элементы на необходимое растояние и задаем внешний вид
+        //разносим наши элементы на необходимое растояние и задаем внешний вид(1!)
         margin-right: 64px
         font-size: 18px
         font-weight: bold
         &:last-child
-            //не забываем сбрасывать для последнего элемента margin
+            //не забываем сбрасывать для последнего элемента margin(1!)
             margin-right: 0px
         a
             text-decoration: none
@@ -80,9 +81,11 @@ html
 
 .left-wrapper
     position: relative
+    //В данном блоке отработали вопросы по z-index
     img
         position: relative
         z-index: 5
+    //знак $ - переменная, которую мы задали в начале кода. Использовать в случае частого повторения.(2!)
     &__rectangle-blue
         position: absolute
         top: 150px
@@ -90,8 +93,11 @@ html
         width: 565.95px
         height: 220px
         background: $color-blue
+        //углы закругляются border-radius (2!)
         border-radius: 100px
+        //задаем тень (2!)
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        //в двнном свойстве мы поворачиваем элементы (2!)
         transform: rotate(-64deg)
         z-index: 2
     &__rectangle-orange
