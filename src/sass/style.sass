@@ -30,6 +30,7 @@ html
 
 .container
     max-width: 1140px
+    //о margin: 0 auto дополнительно указано в позиционировании __content-container (3!)
     margin: 0 auto
     position: relative
 //Тут мы задаем свойства для main-section(1!)
@@ -50,6 +51,7 @@ html
         width: 134px
     &__content-container
         position: relative
+        //выравниваем левую и правую часть секции в 1 строчку (3!)
         display: flex
         flex-direction: row
     &__first-elipse
@@ -128,6 +130,7 @@ html
     top: 150px
     right: 76px
     z-index: 5
+    //дочерний класс для позиционирования иконок(3!)
     &__icons-box
         margin-bottom: 1px
         padding-left: 10px
@@ -137,19 +140,25 @@ html
         font-size: 16px
         margin-bottom: 20px
 
+//Уникальный класс для настройки и реиспользования иконок(3!)
 .icons
-    display: inline-flex
+    //выстраиваем иконки в ряд (3!)
+    display: inline-flex 
     &__item
+        //тут мы центрируем иконки(3!)
         display: flex
         justify-content: center
         align-items: center
         width: 40px
         height: 40px
+        //задали обводку нашему контейнеру с иконкой (3!)
         border: 1px solid $color-blue
         border-radius: 100px
         margin-right: 17px
+        //не забываем убирать марджены у последнего элемента (3!)
         &:last-child
             margin-right: 0px
+        //Иконка настраивается как шрифт (3!)
         i
             font-size: 21px
 
