@@ -50,6 +50,7 @@ html
     &__logo
         width: 134px
     &__content-container
+        //доюавляем, чтобы позиционировать right-wrapper(4!)
         position: relative
         //выравниваем левую и правую часть секции в 1 строчку (3!)
         display: flex
@@ -124,17 +125,22 @@ html
         border-radius: 100px
         transform: rotate(-36.15deg)
 
+//позиционируем всю секцию, а заодно и заголовок (4!)
 .right-wrapper
     width: 372px
+    //размещаем right-wrapper над left-wrappe (4!)
     position: absolute
     top: 150px
     right: 76px
     z-index: 5
     //дочерний класс для позиционирования иконок(3!)
     &__icons-box
+        //верхний контейнер толкает нижний (margin-bottom), а левый толкает правый (margin-right)  (4!)
         margin-bottom: 1px
+        //а тут мы задали расстояние от стенки контейнера к элементу. Но иногда элемент проще слегка подравнять на макете, чем в верстке (4!)
         padding-left: 10px
     &__title
+        //тут мы позиционируем наш __text(4!)
         margin-bottom: 5px
     &__text
         font-size: 16px
@@ -162,34 +168,46 @@ html
         i
             font-size: 21px
 
+//стилизация заголовка (4!)
 .title
     font-size: 72px
     position: relative
     font-weight: bold
     &__hr
+        //позиционируем и настраиваем <hr>(4!)
         position: absolute
         bottom: 0px
         margin: 0px
         width: 65px
+        //наша линия - рамка. Так настраиваем её (4!)
         border: none
         border-top: 1px solid black
 
+//делаем кнопки (4.1!)
 .buttons
+    //позиционируем кнопки по горизонтали(4.1!)
     display: inline-flex
     &__main-btn
+        //толкаем правую кнопку (4.1!)
         margin-right: 32px
+        //стилизуем правую кнопку (4.1!)
         width: 200px
         height: 60px
         background: $color-orange
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
         border-radius: 100px
+        //у кнопки была рамка и мы ее убрали (4.1!)
         border: none
+        //ниже стилизовали текст(4.1!)
         font-size: 18px
         color: white
         font-weight: bold
     &__icon-btn
+        //тут выравниваем по горизонтали текст и кнопки(4.1!)
         display: inline-flex
+        //в этом блоке выровнили текст по центру(4.1!)
         align-items: center
+        //настройка правой кнопки(4.1!)
         img
             margin-right: 12px
     &__text
