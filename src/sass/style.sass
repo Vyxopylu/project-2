@@ -247,23 +247,32 @@ html
 .second-section
     min-height: 700px
     &__container
+        //задали, чтобы спозиционировать круги (6.1!)
         position: relative
+        //после настройки карточек задаем отступ для заголовка от края секции(6!)
         padding-top: 32px
     &__title
+        //оттолкнули заголовок от карточек(6!)
         margin-bottom: 40px
     &__cards-box
+        //задаем отступ иконок от карточек(6.1!)
         margin-bottom: 25px
+        //позиционируем карточки по горизонтали(6!)
         display: inline-flex
     &__cards-item
+        //задаем расстояние между карточками (6!)
         margin-right: 30px
         &:last-child
             margin-right: 0px
+    //позиционирование иконок (6.1!)
     &__icons-box
         display: flex
+        //решаем проблему с не совсем правильным расположением иконок(6.1!)
         justify-content: space-evenly
     &__icons-item
         &:last-child
             margin-right: 0px
+    //позиционируем круги. Указываем для них правильный z-index (6.1!)
     &__first-elipse
         position: absolute
         top: 80px
@@ -276,36 +285,50 @@ html
         z-index: -1
 
 
+//редактируем карточки для гитар(6!)
 .cards-item
+    //не забываем указать position для того, чтобы позиционировать контейнер с текстом(6!)
     position: relative
     width: 360px
     height: 360px
+    //задаем цвет по умолчанию; для остальных карточек цвета будут изменены в классе-модификаторе(6!)
     background: #E2E2E2
     border-radius: 10px
+    //"прибиваем" гитару к нижнему левому краю (6!)
     display: flex
     align-items: flex-end
     &__img
+        //жесткие размеры img(6!)
         height: 335px
     &__text
+        //размер контейнера с самым широким текстом и немножко с запасом (6!)
         width: 280px
+        //размеры и позиционирование текста внутри обёртки (6!)
         font-size: 36px
         text-align: center
+        //поворот текста(6!)
         transform: rotate(90deg)
+        //позиционируем контейнер с текстом (6!)
         position: absolute
         top: 144px
         right: -45px
         font-weight: bold
+    //меняем цвет в карточках модификатором (6!)
     &_orange
         background: $color-orange
     &_blue
         background: $color-blue
 
+//стилизация иконок (6.1!)
 .icons-item
+    //выравниваем и центрируем содержимое контейнера для иконки (6.1!)
     display: inline-flex
     align-items: center
     &__img
+        //позиционируем img и задаем ему размер(6.1!)
         margin-right: 20px
         width: 80px
+    //стилизация текста (6.1!)
     &__text
         font-size: 18px
         span
