@@ -32,6 +32,7 @@ html
     max-width: 1140px
     //о margin: 0 auto дополнительно указано в позиционировании __content-container (3!)
     margin: 0 auto
+    //задаем позиционирование для всех контейнеров - так мы позиционировали круги для 3-ей секции (7!)
     position: relative
 
 //Тут мы задаем свойства для main-section(1!)
@@ -335,27 +336,34 @@ html
             font-weight: bold
             font-size: 48px
 
-
+//третья секция(7!)
 .third-section
     position: relative
     min-height: 640px
     background: #f0f0f0
+    //тут мы прячем ненужные части нашего правого круга (7!)
     overflow: hidden
+    //для расположения кругов z-index(7!)
     z-index: 0
     &__container
+        //распологаем обёртки горизонтально и центрируем по вертикали(7!)
         display: flex
         flex-direction: row
         align-items: center
+        //для того чтобы наши блоки и элементы разошлись в разные стороны и встали на свои места(7!)
         justify-content: space-between
         padding-left: 167px
         padding-top: 46px
+    //задали max-width для того, чтобы при уменьшении блока при адаптиве текст перебрасывался вниз (7!)
     &__right-wrapper
         max-width: 480px
+    //позиционируем блок с кнопками в 2-х следующих классах(7!)
     &__right-title
         margin-bottom: 20px
     &__text
         font-size: 18px
         margin-bottom: 30px
+    //позиционирование кругов (7!)
     &__first-elipse
         position: absolute
         top: 140px
@@ -371,6 +379,7 @@ html
         right: -120px
         top: -120px
 
+//стилизация линии под правым заголовком (7!)
 .title__hr_top
     bottom: 75px
 
