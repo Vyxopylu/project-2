@@ -11,7 +11,9 @@
 $color-blue: #5290EA
 $color-orange: #F28B64
 
+//добавление шрифтов (8.1!)
 @font-face 
+    //название шрифта несколько изменили для проверки - работает ли он(8.1!)
     font-family: "MontserratT"
     src: url('../font/Montserrat-Regular.ttf')
     font-weight: regular
@@ -23,6 +25,7 @@ $color-orange: #F28B64
     font-weight: bold
     font-style: normal
 
+//обращаемся к html, для того чтобы применить шрифт с normal-начертанием ко всему тексту (8.1!)
 html
     font-family: "MontserratT"
     font-weight: regular
@@ -79,6 +82,7 @@ html
         //разносим наши элементы на необходимое растояние и задаем внешний вид(1!)
         margin-right: 64px
         font-size: 18px
+        //подключаем bold-начертание шрифта(8.1!)
         font-weight: bold
         &:last-child
             //не забываем сбрасывать для последнего элемента margin(1!)
@@ -178,6 +182,7 @@ html
 .title
     font-size: 72px
     position: relative
+    //подключаем bold-начертание шрифта(8.1!)
     font-weight: bold
     &__hr
         //позиционируем и настраиваем <hr>(4!)
@@ -207,6 +212,7 @@ html
         //ниже стилизовали текст(4.1!)
         font-size: 18px
         color: white
+        //подключаем bold-начертание шрифта(8.1!)
         font-weight: bold
     &__icon-btn
         //тут выравниваем по горизонтали текст и кнопки(4.1!)
@@ -313,6 +319,7 @@ html
         position: absolute
         top: 144px
         right: -45px
+        //подключаем bold-начертание шрифта(8.1!)
         font-weight: bold
     //меняем цвет в карточках модификатором (6!)
     &_orange
@@ -333,6 +340,7 @@ html
     &__text
         font-size: 18px
         span
+            //подключаем bold-начертание шрифта(8.1!)
             font-weight: bold
             font-size: 48px
 
@@ -383,11 +391,13 @@ html
 .title__hr_top
     bottom: 75px
 
-
+//работа с футером (8!)
 .footer
+    //позиционируем изображение (8!)
     &__img
         position: absolute
         left: -250px
+        //ниже прижали изображение к самому нижнему краю. 
         bottom: 0px
     &__container
         min-height: 272px
