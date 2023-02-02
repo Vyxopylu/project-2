@@ -416,14 +416,18 @@ html
 
 
 //адаптив
+//10! Добавляем медиаправило
 @media (max-width: 1199px)
     .container
         width: 960px
+    //10! Высота секции, чтобы убрать лишнее пространство
     .main-section
         min-height: 690px
     .left-wrapper
+        //10! прописываем правило для уменьшения ширины img
         img
             width: 750px
+        //10! перенесли из F12 наши эксперименты с фигурами
         &__rectangle-blue
             width: 500px
             height: 200px
@@ -433,30 +437,40 @@ html
         &__rectangle-grey
             width: 500px
             height: 200px
+    //10! отодвинули правую обертку
     .right-wrapper
         right: 20px
+    //переносим из консоли эксперименты с кругами
     .main-section__first-elipse
         right: 10px
     .main-section__second-elipse
         top: 560px
 
     .second-section
+        //10! изменяем высоту
         min-height: 600px
+        //10! + NB - выравниваем карточки по центру
         &__cards-box
             display: flex
             justify-content: center
+    //10! изменили размеры для ВСЕХ карточек - им задан единый класс по БЭМ
     .cards-item
         width: 300px
         height: 300px
+        //10! отступ уменьшаем
         margin-right: 20px
+        //10! подправили изображения гитар в карточках 
         &__img
             height: 270px
+        //10! шрифт текста надо сделать меньше и по-новой позиционировать
         &__text
             font-size: 30px
             top: 120px
+    //10! редактируем маржен иконок
     .icons-item__img
         margin-right: 10px
 
+    //10! работаем с 3-ей секцией - меняем позицию заголовка и немного уменьшаем ширину контейнера с текстом 
     .third-section__container
         padding-left: 40px
     .third-section____right-wrapper
