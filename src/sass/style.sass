@@ -476,10 +476,11 @@ html
     .third-section____right-wrapper
         max-width: 450px
 
-    
+//11!
 @media (max-width: 991px)
     .main-section
         min-height: 530px
+        //11! позиционируем круги первой секции.
         &__first-elipse
             top: 70px
         &__second-elipse
@@ -487,6 +488,7 @@ html
     .container
         width: 720px
     .left-wrapper
+        //11! Уменьшили парня и декоративные части.
         img
             width: 550px
         &__rectangle-blue
@@ -498,6 +500,8 @@ html
         &__rectangle-grey
             width: 410px
             height: 130px
+    //11! работаем со шрифтами и элементами правой секции
+    //11! Чтобы не делать лишнюю работу, меняем размер шрифта для всех заголовков. 
     .title
         font-size: 60px
     .right-wrapper
@@ -514,6 +518,7 @@ html
                 height: 50px
             &__icon-btn
                 font-size: 14px
+    //11! Делаем меньше круги. Стилизуем ВСЕ круги.
     .elipse
         width: 150px
         height: 150px
@@ -527,7 +532,10 @@ html
         width: 250px
         height: 250px
 
+
+    //11! Вторая секция
     .second-section
+        //11!высота секции
         min-height: 450px
         &__container
             padding-top: 20px
@@ -535,12 +543,14 @@ html
             margin-bottom: 25px
         &__cards-box
             margin-bottom: 10px
+        //11! позиционирование кругов
         &__second-elipse
             position: absolute
             top: 262px
             left: -35px
         &__first-elipse
             right: -35px
+    //11! Работаем с карточками и их элементами. 
     .cards-item
         width: 220px
         height: 220px
@@ -550,6 +560,7 @@ html
             font-size: 22px
             top: 92px
             right: -75px
+    //11! Работа с иконками и их элементами. 
     .icons-item
         &__img
             width: 50px
@@ -558,23 +569,27 @@ html
             span
                 font-size: 30px
 
+    //11! Работа с третьей секцией
     .third-section
         min-height: 510px
+        //11! убрали левый заголовок
         &__left-title
             display: none
         &__right-wrapper
             max-width: 600px
         &__container
+            //11! меняем space-between на flex-start
             justify-content: flex-start
             padding-left: 20px
             padding-top: 20px
         &__right-title
             margin-bottom: 10px
     
+    //11! подправили hr
     .title
         &__hr_top
             bottom: 60px
-
+    //11! меняем футер
     .footer
         &__img
             max-width: 510px
