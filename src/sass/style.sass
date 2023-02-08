@@ -619,25 +619,33 @@ html
         &__list-item
             margin-right: 0
             font-size: 20px
+    //12! стилизуем гамбургер и позиционируем его
     .hamburger
         position: fixed
         top: 40px
         right: 30px
         width: 30px
+        //12! высота нужна, чтобы пользователь не промахивался в маленькие полоски.
         height: 14px
         z-index: 30
+        //12! стилизуем полоски гамбургера
         span
             height: 2px
             width: 100%
+            //12! - span по умолчанию строчный элемент display: block делает его блочным. 
             display: block
             background: black
             margin-bottom: 4px
+            //12! делаем плавность анимации без JS
             transition: 1s all
             &:last-child
                 margin-bottom: 0
+    //12! Модификатор для изменения гамбургера на крест
     .hamburger_active
         span
+            //12! убираем вышедобавленный margin, т.к. крест кривой
             margin-bottom: -2px
+            //12! обращаемся через псевдоклассы к span по порядковому номеру
             &:nth-child(1)
                 transform: translateY(3px) rotate(-45deg)
             &:nth-child(2)
