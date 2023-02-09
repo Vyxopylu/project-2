@@ -603,14 +603,18 @@ html
     .container
         width: 540px
     .nav-menu
+        //12.1! Стилизация меню при активации. 
         position: fixed
         top: 0
+        //12.1! right, чтобы наше меню уезжало
         right: -100%
         height: 100vh
         width: 50%
         background: $color-blue
         z-index: 20
+        //12.1! добавляем анимацию
         transition: 0.6s all
+        //12.1! располагаем вертикально элементы в меню.
         &__list
             flex-direction: column
             justify-content: space-evenly
@@ -627,6 +631,7 @@ html
         width: 30px
         //12! высота нужна, чтобы пользователь не промахивался в маленькие полоски.
         height: 14px
+        //12.1! NB!
         z-index: 30
         //12! стилизуем полоски гамбургера
         span
@@ -652,6 +657,7 @@ html
                 display: none
             &:nth-child(3)
                 transform: translateY(3px) rotate(45deg)
+    //12.1! модификатор активности
     .nav-menu_active
         right: 0
                 
